@@ -1,0 +1,144 @@
+* {
+    border: 1px solid tomato;
+    margin: .25vh;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+/* ppp HEADER */
+
+header{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.banner {
+    background: url(https://picsum.photos/2000/100);
+    height: calc(100% - 2vh);
+    min-height: 10vh;
+    width: calc(100% - 2vw);
+}
+h1{
+    font-size: 6rem;
+    text-align: center;
+}
+
+h2{
+    font-size: 5rem;
+    text-align: center;
+}
+
+h3 {
+    font-size: 3rem;
+    color: grey;
+}
+
+nav{ 
+    display:flex;
+    justify-content: center;
+    margin-top: 1vh; /*because * applied 2hv to all margin, the logo div and nav are 4vh away. To remedy this I can set the margin-top: of nav or margin-bottom: of div.logo to 0.*/
+    padding: vh;
+    flex-wrap: wrap;
+}
+
+header nav a {
+    text-decoration: none;
+    padding: 1vh 2.5vh;
+    border-radius: 10px;
+    font-size: 2rem;
+    color: black;
+    margin: 2vh 2vh;
+    text-align: center;
+}
+
+header nav a:hover{
+    color:white;
+    background-color: rgba(111, 98, 168, 0.561);
+}
+
+p {
+    font-size: 1.5rem;
+    margin: 1vh;
+    padding: 1vh;
+}
+
+.intro-text {
+    max-width: 66%;
+    text-align: center;
+}
+
+
+/* ppp SECTION / MID */
+section.body{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    border: 1px solid tomato;
+}
+
+section div{
+    margin: 2vh;
+    height: 25vh;
+    min-height: 100px%;
+    width: 25vw;
+    min-width: 100px;
+    border: 2px dashed red;
+    align-items: space-between;
+
+}
+
+
+
+
+/* ppp FOOTER */
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+footer > *{
+    margin: 0;
+}
+
+div.footerLinks {
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    font-size: 1.5rem;
+    padding: 0;
+    margin: 0;
+}
+
+.contact-button{
+    background-color: tomato;
+    border-radius: 5px;
+    font-size: 2rem;
+    width: 10vw;
+    margin: 0 2vw;
+}
+
+.github img{
+    padding: 0;
+    margin: 0;
+}
+.linkedin img{
+    padding: 0;
+    margin: 0;
+    height: 32px;
+    width: auto;
+} /*work to be done, make this file smaller*/
+
+@media (max-width: 600px){
+    nav{
+        flex-direction: column;
+    }
+
+
+}
