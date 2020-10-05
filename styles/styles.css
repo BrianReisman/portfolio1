@@ -1,5 +1,5 @@
 * {
-    border: 1px solid tomato;
+    /* border: 1px solid tomato; */
     margin: .25vh;
 }
 
@@ -18,14 +18,20 @@ header{
 }
 
 .banner {
-    background: url(https://picsum.photos/2000/100);
+    background: url(https://picsum.photos/2000/200);
     height: calc(100% - 2vh);
     min-height: 10vh;
     width: calc(100% - 2vw);
+    padding: 20px;
 }
 h1{
     font-size: 6rem;
     text-align: center;
+}
+
+a{
+    text-decoration: none;
+    color: black;
 }
 
 h2{
@@ -42,23 +48,43 @@ nav{
     display:flex;
     justify-content: center;
     margin-top: 1vh; /*because * applied 2hv to all margin, the logo div and nav are 4vh away. To remedy this I can set the margin-top: of nav or margin-bottom: of div.logo to 0.*/
-    padding: vh;
     flex-wrap: wrap;
 }
 
 header nav a {
     text-decoration: none;
-    padding: 1vh 2.5vh;
+    padding: 1vh 3.5vh;
     border-radius: 10px;
-    font-size: 2rem;
+    font-size: 2.5rem;
     color: black;
-    margin: 2vh 2vh;
+    margin: 2vh 1vh;
     text-align: center;
 }
 
 header nav a:hover{
     color:white;
     background-color: rgba(111, 98, 168, 0.561);
+}
+
+
+
+.home #home{
+    background-color: tomato;
+}
+
+.contact header nav a.contact{
+    background-color: tomato;
+}
+
+
+
+
+
+
+
+a.contact:hover{
+    background-color: white;
+    color: black;
 }
 
 p {
@@ -78,20 +104,40 @@ section.body{
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
-    border: 1px solid tomato;
+    /* border: 1px solid tomato; */
 }
 
 section div{
     margin: 2vh;
-    height: 25vh;
+    height: 20rem;
     min-height: 100px;
-    width: 25vw;
+    width: 20rem;
     min-width: 100px;
-    border: 2px dashed red;
+    /* border: 2px dashed red; */
     align-items: space-between;
-
+    /* flex-grow: .5; */
 }
 
+
+
+div.display1 {
+    background-image: url(https://picsum.photos/500/301);
+}
+.display2 {
+    background-image: url(https://picsum.photos/500/302);
+}
+.display3 {
+    background-image: url(https://picsum.photos/500/303);
+}
+.display4 {
+    background-image: url(https://picsum.photos/500/304);
+}
+.display5 {
+    background-image: url(https://picsum.photos/500/305);
+}
+.display6 {
+    background-image: url(https://picsum.photos/500/306);
+}
 
 
 
@@ -121,7 +167,7 @@ div.footerLinks {
     border-radius: 5px;
     font-size: 2rem;
     width: 10vw;
-    margin: 0 2vw;
+    margin: 1vw 2vw;
 }
 
 .github img{
@@ -135,8 +181,29 @@ div.footerLinks {
     width: auto;
 } /*work to be done, make this file smaller*/
 
+
+
+/* ppp Media */
+@media (max-width: 800px){
+    button.contact-button {
+    width: 100px;
+}
+
+
 @media (max-width: 600px){
-    nav{
-        flex-direction: column;
+    header nav{
+        flex-direction: row;
+        flex-wrap: wrap;
+        max-width: 300px;
     }
+    header nav a {
+        text-decoration: none;
+        padding: 1vh vh;
+        border-radius: 10px;
+        font-size: 2rem;
+        color: black;
+        margin:1vh 2vh;
+        text-align: center;
+    }
+    
 }
