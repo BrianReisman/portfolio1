@@ -1,5 +1,5 @@
 * {
-    /* border: 1px solid tomato; */
+    border: 1px solid tomato;
     margin: .25vh;
 }
 
@@ -17,16 +17,23 @@ header{
     flex-wrap: wrap;
 }
 
-.banner {
+.banner { /*image on the right side isn't sitting the way I'd like*/
     background: url(https://picsum.photos/2000/200);
     height: calc(100% - 2vh);
     min-height: 10vh;
-    width: calc(100% - 2vw);
-    padding: 20px;
+    width: 95%;
+    margin: 1vh;
+    padding:20px;
 }
+
+
 h1{
     font-size: 6rem;
     text-align: center;
+}
+
+header h1 span{
+    font-size: 2rem;
 }
 
 a{
@@ -94,7 +101,7 @@ p {
 }
 
 .intro-text {
-    max-width: 66%;
+    max-width: 50%;
     text-align: center;
 }
 
