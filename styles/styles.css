@@ -1,10 +1,64 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	/* border: 0; */
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/* Code By Brian Below */
+
+
 * {
-    border: 1px solid tomato;
+    /* border: 1px solid tomato; */
     margin: .25vh;
 }
 
 html{
     font-size: 62.5%;
+    background-color: #f4f4f4;
+    box-sizing: border-box;
 }
 
 /* ppp HEADER */
@@ -17,19 +71,21 @@ header{
     flex-wrap: wrap;
 }
 
-.banner { /*image on the right side isn't sitting the way I'd like*/
-    background: url(https://picsum.photos/2000/200);
+/* .banner { /*image on the right side isn't sitting the way I'd like */
+    /* background: url(https://picsum.photos/2099/200) center;
     height: calc(100% - 2vh);
     min-height: 10vh;
     width: 95%;
     margin: 1vh;
     padding:20px;
-}
+    background-size: cover;
+} */
 
 
 h1{
     font-size: 6rem;
     text-align: center;
+    margin-top: 1%;
 }
 
 header h1 span{
@@ -42,6 +98,7 @@ a{
 }
 
 h2{
+    margin-top: 2%;
     font-size: 5rem;
     text-align: center;
 }
@@ -54,14 +111,20 @@ h3 {
 nav{ 
     display:flex;
     justify-content: center;
-    margin-top: 1vh; /*because * applied 2hv to all margin, the logo div and nav are 4vh away. To remedy this I can set the margin-top: of nav or margin-bottom: of div.logo to 0.*/
+    margin-top: 1%; /*because * applied 2hv to all margin, the logo div and nav are 4vh away. To remedy this I can set the margin-top: of nav or margin-bottom: of div.logo to 0.*/
     flex-wrap: wrap;
+}
+
+header{
+    margin-top: 2%;
+    width: 100%;
+    position: fixed;
+    background-color:rgba(245,245,245,0.9);
 }
 
 header nav a {
     text-decoration: none;
     padding: 1vh 3.5vh;
-    border-radius: 10px;
     font-size: 2.5rem;
     color: black;
     margin: 2vh 1vh;
@@ -71,6 +134,7 @@ header nav a {
 header nav a:hover{
     color:white;
     background-color: rgba(111, 98, 168, 0.561);
+    border-radius: 10px;
 }
 
 
@@ -83,30 +147,32 @@ header nav a:hover{
     background-color: tomato;
 }
 
-
-
-
-
-
-
 a.contact:hover{
     background-color: white;
     color: black;
 }
 
 p {
-    font-size: 1.5rem;
-    margin: 1vh;
-    padding: 1vh;
+    font-size:2rem;
+    margin: 1%;
+    padding: 1%;
 }
-
-.intro-text {
-    max-width: 50%;
-    text-align: center;
-}
-
 
 /* ppp SECTION / MID */
+
+.body-text{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+.intro-text {
+    width: 75%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
 section.body{
     display: flex;
     flex-flow: row wrap;
@@ -123,6 +189,16 @@ section div{
     /* border: 2px dashed red; */
     align-items: space-between;
     /* flex-grow: .5; */
+}
+
+.container{
+    height:65vh;
+    background-image: url(https://picsum.photos/2079/200);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    width: auto;
 }
 
 
@@ -159,7 +235,9 @@ footer {
 footer > *{
     margin: 0;
 }
-
+.foot1{
+    margin-top: 2%;
+}
 div.footerLinks {
     width: 100px;
     display: flex;
@@ -174,7 +252,7 @@ div.footerLinks {
     border-radius: 5px;
     font-size: 2rem;
     width: 10vw;
-    margin: 1vw 2vw;
+    margin: 6%;
 }
 
 .github img{
@@ -195,22 +273,35 @@ div.footerLinks {
     button.contact-button {
     width: 100px;
 }
+}
 
 
-@media (max-width: 600px){
+@media (max-width: 500px){
+    header{
+        position: absolute;
+    }
     header nav{
-        flex-direction: row;
-        flex-wrap: wrap;
-        max-width: 300px;
+        flex-direction: column;
     }
     header nav a {
         text-decoration: none;
-        padding: 1vh vh;
+        /* padding: 1%; */
         border-radius: 10px;
-        font-size: 2rem;
+        font-size: 1.5rem;
         color: black;
-        margin:1vh 2vh;
+        margin: 1vh 2vh;
         text-align: center;
+        position: relative;
     }
-    
+    section.body{
+        margin-top: 12%;
+    }
+    div.intro-text{
+        margin-top: 12%;
+    }
+    h1{
+        margin: 0%;
+    }
+
+
 }
