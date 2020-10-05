@@ -51,7 +51,7 @@ table {
 
 
 * {
-    border: 1px solid tomato;
+    /* border: 1px solid tomato; */
     /* margin: 5vh; */
     max-width: 100%;
 
