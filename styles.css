@@ -2,7 +2,7 @@
    v2.0 | 20110126
    License: none (public domain)
 */
-html, body, div, span, applet, object, iframe,
+*, html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
 del, dfn, em, img, ins, kbd, q, s, samp,
@@ -15,7 +15,7 @@ article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup, 
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-	margin: 0;
+	margin: 2vh;
 	padding: 0;
 	/* border: 0; */
 	font-size: 100%;
@@ -51,8 +51,10 @@ table {
 
 
 * {
-    /* border: 1px solid tomato; */
-    margin: .25vh;
+    border: 1px solid tomato;
+    /* margin: 5vh; */
+    max-width: 100%;
+
 }
 
 html{
@@ -71,16 +73,13 @@ header{
     flex-wrap: wrap;
 }
 
-/* .banner { /*image on the right side isn't sitting the way I'd like */
-    /* background: url(https://picsum.photos/2099/200) center;
-    height: calc(100% - 2vh);
-    min-height: 10vh;
-    width: 95%;
-    margin: 1vh;
-    padding:20px;
-    background-size: cover;
-} */
-
+.h1a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
 
 h1{
     font-size: 6rem;
@@ -111,23 +110,24 @@ h3 {
 nav{ 
     display:flex;
     justify-content: center;
+    width: 50%;
     margin-top: 1%; /*because * applied 2hv to all margin, the logo div and nav are 4vh away. To remedy this I can set the margin-top: of nav or margin-bottom: of div.logo to 0.*/
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
 }
 
 header{
     margin-top: 2%;
     width: 100%;
     position: fixed;
-    background-color:rgba(245,245,245,0.9);
+    background-color:rgba(245,245,245,0.85);
 }
 
-header nav a {
+header nav a{
     text-decoration: none;
-    padding: 1vh 3.5vh;
+    padding: 1% 3%;
     font-size: 2.5rem;
     color: black;
-    margin: 2vh 1vh;
+    margin: 1rem 1rem;
     text-align: center;
 }
 
@@ -137,19 +137,12 @@ header nav a:hover{
     border-radius: 10px;
 }
 
-
-
 .home #home{
     background-color: tomato;
 }
 
 .contact header nav a.contact{
     background-color: tomato;
-}
-
-a.contact:hover{
-    background-color: white;
-    color: black;
 }
 
 p {
@@ -159,25 +152,32 @@ p {
 }
 
 /* ppp SECTION / MID */
-
-.body-text{
+section.body-text{
     display:flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
 }
-.intro-text {
-    width: 75%;
+div.intro-text {
+    width: 65%;
+    height: auto;
     text-align: center;
     display: flex;
     justify-content: center;
     flex-direction: column;
+    padding: 0;
+}
+
+.intro-text p{
+    margin: 0;
+    /* padding: 0; */
 }
 
 section.body{
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
-    /* border: 1px solid tomato; */
+    flex-shrink: 2;
 }
 
 section div{
@@ -186,9 +186,7 @@ section div{
     min-height: 100px;
     width: 20rem;
     min-width: 100px;
-    /* border: 2px dashed red; */
     align-items: space-between;
-    /* flex-grow: .5; */
 }
 
 .container{
@@ -223,72 +221,125 @@ div.display1 {
 }
 
 
-
-/* ppp FOOTER */
-footer {
+                            /*            */
+                            /* ppp FOOTER */
+                            /*            */
+footer{
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
+    padding: 0;
 }
-
-footer > *{
-    margin: 0;
+.cta{
+    margin:0;
+    padding:0;
 }
-.foot1{
-    margin-top: 2%;
-}
-div.footerLinks {
-    width: 100px;
+    h3{
+        margin:0;
+        padding:0;
+    
+    }
+    .cta{
+        margin:0;
+        padding:0;
+    }
+    .cta a{
+        text-decoration: none;
+        /* padding: 1% 3%; */
+        font-size: 2.5rem;
+        color: black;
+        /* margin: 0rem 1rem; */
+        text-align: center;    
+    }
+    .cta a:hover{
+        color:white;
+        background-color: rgba(111, 98, 168, 0.561);
+        border-radius: 10px;
+        padding: 1% 3%;    
+    }
+.social{
     display: flex;
+    flex-direction: row;
     justify-content: center;
-    font-size: 1.5rem;
+    width: 5%;
     padding: 0;
     margin: 0;
 }
-
-.contact-button{
-    background-color: tomato;
-    border-radius: 5px;
-    font-size: 2rem;
-    width: 10vw;
-    margin: 6%;
+.github{
+    width: 50%;
+    padding: 20%;
+    margin-right: 5%;
+    margin: 0;
+    height: auto;
+    background-image: url('gh.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.linkedin{
+    background-position: cover;
+    width: 50%;
+    padding: 20%;
+    margin-left: 5%;
+    margin: 0;
+    height: auto;
+    background-image: url('li.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
+                            /*            */
+                            /* ppp FOOTER */
+                            /*            */
 
-.github img{
-    padding: 0;
-    margin: 0;
-}
-.linkedin img{
-    padding: 0;
-    margin: 0;
-    height: 32px;
-    width: auto;
-} /*work to be done, make this file smaller*/
+
+
+
+
+
 
 
 
 /* ppp Media */
 @media (max-width: 800px){
-    button.contact-button {
-    width: 100px;
-}
+    html{
+        font-size: 45%;
+    }
+    header{
+        position: absolute;
+        display: flex;
+        justify-content: center;
+    }
+    header nav{
+        flex-direction: column;
+        flex-grow: 1;
+    }
+    header nav a{
+        margin: 1%;
+    }
+    nav {
+        width: 40%;
+    }
+
 }
 
 
 @media (max-width: 500px){
     header{
         position: absolute;
+        display: flex;
+        justify-content: center;
     }
     header nav{
         flex-direction: column;
+        flex: 1;
     }
     header nav a {
         text-decoration: none;
-        /* padding: 1%; */
         border-radius: 10px;
-        font-size: 1.5rem;
+        font-size: 2.5rem;
         color: black;
         margin: 1vh 2vh;
         text-align: center;
@@ -298,11 +349,20 @@ div.footerLinks {
         margin-top: 12%;
     }
     div.intro-text{
-        margin-top: 12%;
+        margin-top: 6%;
     }
     h1{
         margin: 0%;
     }
-
-
+    h3{
+        font-size: 2rem;
+        margin-bottom: 12%;
+    }
+    div.intro-text {
+        width: 85%;
+        height: auto;
+    }
+    footer.foot1{
+        width: 100%;
+    }
 }
